@@ -58,7 +58,7 @@ const About = () => {
       {/* Section avec image et texte */}
       <div className="row align-items-center mb-5">
         <div className="col-md-4 text-center">
-          <a href="/me.jpg" className="profile-img-container">
+          <a href="/me.jpg" target="_blank" className="profile-img-container">
             <img
               src="/me.jpg"
               width={200}
