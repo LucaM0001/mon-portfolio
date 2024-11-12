@@ -34,7 +34,7 @@ const Header = () => {
               <li className="nav-item">
                 <Link className="nav-link hover-underline-animation" to="/">
                   À propos
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -42,7 +42,7 @@ const Header = () => {
                   to="/projects"
                 >
                   Projets
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -50,13 +50,13 @@ const Header = () => {
                   to="/contact"
                 >
                   Contact
-                </Link>{" "}
+                </Link>
               </li>
             </ul>
             {/* Icônes des réseaux sociaux avec animations */}
             <div className="d-flex ms-3">
               <a
-                href="https://github.com/tonprofil"
+                href="https://github.com/LucaM0001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white me-3 icon-hover"
@@ -64,7 +64,7 @@ const Header = () => {
                 <FaGithub size={25} />
               </a>
               <a
-                href="https://www.linkedin.com/in/tonprofil"
+                href="https://www.linkedin.com/in/luca-mamitiana-randrianiaina-5497b7286"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white me-3 icon-hover"
@@ -72,7 +72,7 @@ const Header = () => {
                 <FaLinkedin size={25} />
               </a>
               <a
-                href="mailto:exemple@email.com"
+                href="mailto:lucamamitiana@gmail.com"
                 className="text-white me-3 icon-hover"
               >
                 <FaEnvelope size={25} />
