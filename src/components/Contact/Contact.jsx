@@ -1,25 +1,48 @@
 import React from "react"
 import { useForm } from "react-hook-form"
+import emailjs from "@emailjs/browser"
 
 function Contact() {
-  // Fonction de soumission du formulaire
-  const onSubmit = (data) => {
-    alert("Message envoyé : " + JSON.stringify(data))
-  }
-
-  // Utiliser useForm avec mode: 'onChange' pour la validation en temps réel
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isValid },
   } = useForm({
-    mode: "onChange", // Validation en temps réel pendant la saisie
+    mode: "onChange",
   })
 
+  const serviceID = import.meta.env.VITE_SERVICE_ID
+  const templateID = import.meta.env.VITE_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY
+
+  const onSubmit = (data) => {
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      message: data.message,
+      date: new Date().toLocaleDateString(),
+    }
+
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log(templateParams)
+
+        console.log(response)
+        // alert("Message envoyé avec succès !")
+        // reset()
+      })
+      .catch((error) => {
+        console.error("Erreur lors de l'envoi :", error)
+        // alert("Une erreur s'est produite, veuillez réessayer.")
+      })
+  }
+
   return (
-    <section className="container mt-5">
+    <section className="container pt-5 pb-2">
       <h2>Contactez-moi</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
             Nom
@@ -83,11 +106,7 @@ function Contact() {
           )}
         </div>
 
-        <button
-          type="submit"
-          className="btn btn-primary"
-          disabled={!isValid} // Désactiver le bouton si le formulaire n'est pas valide
-        >
+        <button type="submit" className="btn btn-primary" disabled={!isValid}>
           Envoyer
         </button>
       </form>

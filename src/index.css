@@ -1,3 +1,23 @@
+html,
+body {
+  height: 100%; /* S'assurer que le body prend toute la hauteur */
+  margin: 0; /* Supprimer les marges par défaut */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaces entre le contenu et le footer */
+}
+
+section {
+  margin-top: 80px;
+}
+
+footer {
+  margin-top: auto; /* Cela permet de coller le footer au bas */
+}
+
 /* Conteneur principal */
 .about-container {
   padding: 50px 20px;

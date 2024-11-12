@@ -7,12 +7,10 @@ function Header() {
     <header className="bg-dark text-white fixed-top">
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
-          {/* Logo ou ton nom */}
+          <img src="/151514153.png" width={60} alt="logo" />
           <Link className="navbar-brand" to="/">
-            <h2 className="text-light">MonPortfolio</h2>{" "}
-            {/* Remplace par ton nom */}
+            <h2 className="text-light">RANDRIANIAINA Luca Mamitiana</h2>
           </Link>
-          {/* Bouton hamburger pour mobile */}
           <button
             className="navbar-toggler"
             type="button"

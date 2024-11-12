@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   FaReact,
   FaNodeJs,
@@ -9,9 +9,49 @@ import {
   FaLinkedin,
   FaGithub,
   FaEnvelope,
+  FaFileWord,
+  FaFileExcel,
+  FaFilePowerpoint,
+  FaDatabase,
 } from "react-icons/fa"
+import { SiTypescript, SiCodeigniter, SiPhp } from "react-icons/si" // Import PHP icon
 
-function About() {
+const About = () => {
+  const [formations, setFormations] = useState([
+    {
+      title:
+        "Informatique de Gestion Génie Logiciel et Intélligence Artificielle (IGGLIA)",
+      place: "Institut Supérieur Polytechnique de Madagascar (ISPM)",
+      year: "2021 - Présent",
+      description:
+        "Formation en Informatique de Gestion, Génie Logiciel et Intelligence Artificielle, combinant la gestion des systèmes informatiques, le développement logiciel avancé et l'étude des technologies d'intelligence artificielle pour des solutions innovantes.",
+    },
+    {
+      title: "Gestion de Base de Données Relationnelles (Microsoft Access)",
+      place: "Univers Infos",
+      year: "2020",
+      description:
+        "Formation spécialisée dans la gestion et l'administration des bases de données relationnelles, avec une approche pratique sur Microsoft Access et la création de bases de données relationnelles.",
+    },
+    {
+      title: "Formation en Bureautique",
+      place: "CFM",
+      year: "2019",
+      description:
+        "Formation sur l'utilisation des logiciels bureautiques, notamment Microsoft Word, Excel et PowerPoint, pour améliorer la productivité dans le milieu professionnel.",
+    },
+  ])
+
+  const displayFormations = formations.map((formation) => (
+    <div className="list-group-item">
+      <h5>{formation.title}</h5>
+      <p>
+        {formation.place} - {formation.year}
+      </p>
+      <p>{formation.description}</p>
+    </div>
+  ))
+
   return (
     <section className="about-container">
       <h2 className="text-center mb-5">À propos de moi</h2>
@@ -19,17 +59,23 @@ function About() {
       {/* Section avec image et texte */}
       <div className="row align-items-center mb-5">
         <div className="col-md-4 text-center">
-          <img
-            src="https://via.placeholder.com/150" // Remplace avec ton image
-            alt="Photo de profil"
-            className="img-fluid rounded-circle shadow-sm about-img"
-          />
+          <a href="/me.jpg">
+            <img
+              src="/me.jpg"
+              width={200}
+              alt="Photo de profil"
+              className="img-fluid rounded-circle shadow-sm about-img"
+            />
+          </a>
         </div>
         <div className="col-md-8">
           <p className="lead text-muted">
-            Développeur passionné par la création d'applications web modernes.
-            Mon expertise réside dans le développement front-end avec ReactJS et
-            la création d'interfaces interactives et performantes.
+            Développeur passionné spécialisé dans la création d'applications web
+            modernes. Mon expertise couvre le développement front-end avec
+            ReactJS, l'utilisation de TypeScript pour un code plus robuste, et
+            la stack MERN pour des applications full-stack performantes. Je
+            maîtrise également CodeIgniter pour des solutions backend en PHP,
+            offrant des interfaces interactives, sécurisées, et optimisées.
           </p>
         </div>
       </div>
@@ -38,21 +84,27 @@ function About() {
       <div className="row mb-5">
         <div className="col-md-12 text-center">
           <h3>Compétences</h3>
+
+          {/* Langages */}
+          <h4>Langages</h4>
           <div className="skills-container">
-            <div className="card skill-card">
-              <FaReact size={50} className="text-primary" />
-              <h5>ReactJS</h5>
-              <p>Création d'applications modernes et réactives avec React.</p>
-            </div>
-            <div className="card skill-card">
-              <FaNodeJs size={50} className="text-success" />
-              <h5>Node.js</h5>
-              <p>Développement de backend rapide et évolutif avec Node.js.</p>
-            </div>
             <div className="card skill-card">
               <FaJs size={50} className="text-warning" />
               <h5>JavaScript</h5>
               <p>Maîtrise de JavaScript pour des applications dynamiques.</p>
+            </div>
+            <div className="card skill-card">
+              <SiTypescript size={50} className="text-info" />
+              <h5>TypeScript</h5>
+              <p>Développement sécurisé avec typage statique.</p>
+            </div>
+            <div className="card skill-card">
+              <SiPhp size={50} className="text-primary" />
+              <h5>PHP</h5>
+              <p>
+                Développement back-end avec PHP pour des applications
+                dynamiques.
+              </p>
             </div>
             <div className="card skill-card">
               <FaHtml5 size={50} className="text-danger" />
@@ -67,6 +119,51 @@ function About() {
               </p>
             </div>
           </div>
+
+          {/* Frameworks */}
+          <h4>Frameworks</h4>
+          <div className="skills-container">
+            <div className="card skill-card">
+              <FaReact size={50} className="text-primary" />
+              <h5>ReactJS</h5>
+              <p>Création d'applications modernes et réactives avec React.</p>
+            </div>
+            <div className="card skill-card">
+              <FaNodeJs size={50} className="text-success" />
+              <h5>Node.js</h5>
+              <p>Développement de backend rapide et évolutif avec Node.js.</p>
+            </div>
+            <div className="card skill-card">
+              <SiCodeigniter size={50} className="text-danger" />
+              <h5>CodeIgniter</h5>
+              <p>Framework PHP pour des applications performantes.</p>
+            </div>
+          </div>
+
+          {/* Software */}
+          <h4>Logiciels</h4>
+          <div className="skills-container">
+            <div className="card skill-card">
+              <FaFileWord size={50} className="text-primary" />
+              <h5>Microsoft Word</h5>
+              <p>Création de documents professionnels et rapports.</p>
+            </div>
+            <div className="card skill-card">
+              <FaFileExcel size={50} className="text-success" />
+              <h5>Microsoft Excel</h5>
+              <p>Analyse de données et création de tableaux complexes.</p>
+            </div>
+            <div className="card skill-card">
+              <FaFilePowerpoint size={50} className="text-danger" />
+              <h5>Microsoft PowerPoint</h5>
+              <p>Création de présentations visuellement attrayantes.</p>
+            </div>
+            <div className="card skill-card">
+              <FaDatabase size={50} className="text-info" />
+              <h5>Microsoft Access</h5>
+              <p>Création et gestion de bases de données relationnelles.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -74,32 +171,7 @@ function About() {
       <div className="row mb-5">
         <div className="col-md-12">
           <h3>Formations</h3>
-          <div className="list-group">
-            <div className="list-group-item">
-              <h5>Développeur Web Full-Stack</h5>
-              <p>Université XYZ - 2022</p>
-              <p>
-                Formation complète en développement web, incluant le front-end
-                (ReactJS) et back-end (Node.js, Express).
-              </p>
-            </div>
-            <div className="list-group-item">
-              <h5>Licence Informatique</h5>
-              <p>Université ABC - 2019</p>
-              <p>
-                Formation en informatique avec un focus sur les algorithmes et
-                la programmation orientée objet.
-              </p>
-            </div>
-            <div className="list-group-item">
-              <h5>Certification ReactJS</h5>
-              <p>OpenClassrooms - 2021</p>
-              <p>
-                Certification ReactJS, couvrant la création d'applications
-                interactives et la gestion d'état avec Redux.
-              </p>
-            </div>
-          </div>
+          <div className="list-group">{displayFormations}</div>
         </div>
       </div>
 
@@ -112,7 +184,7 @@ function About() {
             <p>
               <FaEnvelope /> Email:{" "}
               <a href="mailto:exemple@email.com" className="contact-link">
-                exemple@email.com
+                lucamamitiana@gmail.com
               </a>
             </p>
             <p>
@@ -123,7 +195,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                github.com/tonprofil
+                https://github.com/LucaM0001
               </a>
             </p>
             <p>
@@ -134,7 +206,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                linkedin.com/in/tonprofil
+                https://www.linkedin.com/in/luca-mamitiana-randrianiaina-5497b7286
               </a>
             </p>
           </div>
