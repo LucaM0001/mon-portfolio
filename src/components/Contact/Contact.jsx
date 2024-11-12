@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser"
 import { toast } from "react-toastify"
+import { Spinner } from "react-bootstrap"
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false)
   const {
     register,
     handleSubmit,
@@ -18,6 +20,7 @@ const Contact = () => {
   const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
   const onSubmit = (data) => {
+    setLoading(true)
     const templateParams = {
       name: data.name,
       email: data.email,
@@ -33,6 +36,9 @@ const Contact = () => {
       })
       .catch((error) => {
         toast.error("Une erreur s'est produite, veuillez réessayer.")
+      })
+      .finally(() => {
+        setLoading(false) // Réinitialiser l'état de chargement après la soumission
       })
   }
 
@@ -103,8 +109,19 @@ const Contact = () => {
           )}
         </div>
 
-        <button type="submit" className="btn btn-primary" disabled={!isValid}>
-          Envoyer
+        <button
+          type="submit"
+          className="btn btn-primary"
+          disabled={!isValid || loading} // Désactive le bouton si le formulaire est invalide ou en cours de soumission
+        >
+          {loading ? (
+            <>
+              <Spinner animation="border" size="sm" className="me-2" />
+              <span>Envoi en cours...</span>
+            </>
+          ) : (
+            "Envoyer"
+          )}
         </button>
       </form>
     </section>

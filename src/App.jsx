@@ -11,7 +11,7 @@ import "react-toastify/ReactToastify.min.css"
 const App = () => {
   return (
     <>
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="top-left" />
       <Router>
         <Header />
         <Routes>
