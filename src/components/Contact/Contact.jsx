@@ -1,6 +1,7 @@
 import React from "react"
 import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser"
+import { toast } from "react-toastify"
 
 const Contact = () => {
   const {
@@ -27,15 +28,11 @@ const Contact = () => {
     emailjs
       .send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
-        console.log(templateParams)
-
-        console.log(response)
-        // alert("Message envoyé avec succès !")
-        // reset()
+        toast.success("Message envoyé avec succès !")
+        reset()
       })
       .catch((error) => {
-        console.error("Erreur lors de l'envoi :", error)
-        // alert("Une erreur s'est produite, veuillez réessayer.")
+        toast.error("Une erreur s'est produite, veuillez réessayer.")
       })
   }
 
