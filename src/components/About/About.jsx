@@ -14,7 +14,7 @@ import {
   FaFilePowerpoint,
   FaDatabase,
 } from "react-icons/fa"
-import { SiTypescript, SiCodeigniter, SiPhp } from "react-icons/si" // Import PHP icon
+import { SiTypescript, SiCodeigniter, SiPhp } from "react-icons/si"
 
 const About = () => {
   const [formations, setFormations] = useState([
@@ -24,26 +24,25 @@ const About = () => {
       place: "Institut Supérieur Polytechnique de Madagascar (ISPM)",
       year: "2021 - Présent",
       description:
-        "Formation en Informatique de Gestion, Génie Logiciel et Intelligence Artificielle, combinant la gestion des systèmes informatiques, le développement logiciel avancé et l'étude des technologies d'intelligence artificielle pour des solutions innovantes.",
+        "Formation en Informatique de Gestion, Génie Logiciel et Intelligence Artificielle...",
     },
     {
       title: "Gestion de Base de Données Relationnelles (Microsoft Access)",
       place: "Univers Infos",
       year: "2020",
       description:
-        "Formation spécialisée dans la gestion et l'administration des bases de données relationnelles, avec une approche pratique sur Microsoft Access et la création de bases de données relationnelles.",
+        "Formation spécialisée dans la gestion et l'administration des bases de données relationnelles...",
     },
     {
       title: "Formation en Bureautique",
       place: "CFM",
       year: "2019",
-      description:
-        "Formation sur l'utilisation des logiciels bureautiques, notamment Microsoft Word, Excel et PowerPoint, pour améliorer la productivité dans le milieu professionnel.",
+      description: "Formation sur l'utilisation des logiciels bureautiques...",
     },
   ])
 
-  const displayFormations = formations.map((formation) => (
-    <div className="list-group-item">
+  const displayFormations = formations.map((formation, index) => (
+    <div key={index} className="list-group-item hover-card">
       <h5>{formation.title}</h5>
       <p>
         {formation.place} - {formation.year}
@@ -59,23 +58,21 @@ const About = () => {
       {/* Section avec image et texte */}
       <div className="row align-items-center mb-5">
         <div className="col-md-4 text-center">
-          <a href="/me.jpg">
+          <a href="/me.jpg" className="profile-img-container">
             <img
               src="/me.jpg"
               width={200}
               alt="Photo de profil"
-              className="img-fluid rounded-circle shadow-sm about-img"
+              className="img-fluid rounded-circle shadow-lg profile-img"
             />
           </a>
         </div>
         <div className="col-md-8">
           <p className="lead text-muted">
             Développeur passionné spécialisé dans la création d'applications web
-            modernes. Mon expertise couvre le développement front-end avec
-            ReactJS, l'utilisation de TypeScript pour un code plus robuste, et
-            la stack MERN pour des applications full-stack performantes. Je
-            maîtrise également CodeIgniter pour des solutions backend en PHP,
-            offrant des interfaces interactives, sécurisées, et optimisées.
+            modernes avec ReactJS, TypeScript, et MERN. Mon expertise s'étend
+            aussi à CodeIgniter pour des solutions backend en PHP, garantissant
+            des applications performantes et sécurisées.
           </p>
         </div>
       </div>
@@ -88,81 +85,100 @@ const About = () => {
           {/* Langages */}
           <h4>Langages</h4>
           <div className="skills-container">
-            <div className="card skill-card">
-              <FaJs size={50} className="text-warning" />
-              <h5>JavaScript</h5>
-              <p>Maîtrise de JavaScript pour des applications dynamiques.</p>
-            </div>
-            <div className="card skill-card">
-              <SiTypescript size={50} className="text-info" />
-              <h5>TypeScript</h5>
-              <p>Développement sécurisé avec typage statique.</p>
-            </div>
-            <div className="card skill-card">
-              <SiPhp size={50} className="text-primary" />
-              <h5>PHP</h5>
-              <p>
-                Développement back-end avec PHP pour des applications
-                dynamiques.
-              </p>
-            </div>
-            <div className="card skill-card">
-              <FaHtml5 size={50} className="text-danger" />
-              <h5>HTML5</h5>
-              <p>Structuration de pages web sémantiques avec HTML5.</p>
-            </div>
-            <div className="card skill-card">
-              <FaCss3 size={50} className="text-info" />
-              <h5>CSS3</h5>
-              <p>
-                Stylisation avancée avec CSS3 et SASS pour des designs modernes.
-              </p>
-            </div>
+            {[
+              {
+                icon: <FaJs size={50} className="text-warning" />,
+                title: "JavaScript",
+                description: "Maîtrise pour des applications dynamiques.",
+              },
+              {
+                icon: <SiTypescript size={50} className="text-info" />,
+                title: "TypeScript",
+                description: "Développement sécurisé avec typage statique.",
+              },
+              {
+                icon: <SiPhp size={50} className="text-primary" />,
+                title: "PHP",
+                description: "Développement back-end dynamique.",
+              },
+              {
+                icon: <FaHtml5 size={50} className="text-danger" />,
+                title: "HTML5",
+                description: "Structuration de pages web sémantiques.",
+              },
+              {
+                icon: <FaCss3 size={50} className="text-info" />,
+                title: "CSS3",
+                description: "Stylisation avancée avec CSS3 et SASS.",
+              },
+            ].map((skill, index) => (
+              <div key={index} className="card skill-card hover-card">
+                {skill.icon}
+                <h5>{skill.title}</h5>
+                <p>{skill.description}</p>
+              </div>
+            ))}
           </div>
 
           {/* Frameworks */}
-          <h4>Frameworks</h4>
+          <h4>Frameworks et Librairies</h4>
           <div className="skills-container">
-            <div className="card skill-card">
-              <FaReact size={50} className="text-primary" />
-              <h5>ReactJS</h5>
-              <p>Création d'applications modernes et réactives avec React.</p>
-            </div>
-            <div className="card skill-card">
-              <FaNodeJs size={50} className="text-success" />
-              <h5>Node.js</h5>
-              <p>Développement de backend rapide et évolutif avec Node.js.</p>
-            </div>
-            <div className="card skill-card">
-              <SiCodeigniter size={50} className="text-danger" />
-              <h5>CodeIgniter</h5>
-              <p>Framework PHP pour des applications performantes.</p>
-            </div>
+            {[
+              {
+                icon: <FaReact size={50} className="text-primary" />,
+                title: "ReactJS",
+                description: "Création d'applications modernes et réactives.",
+              },
+              {
+                icon: <FaNodeJs size={50} className="text-success" />,
+                title: "Node.js",
+                description: "Backend rapide et évolutif.",
+              },
+              {
+                icon: <SiCodeigniter size={50} className="text-danger" />,
+                title: "CodeIgniter",
+                description: "Framework PHP performant.",
+              },
+            ].map((framework, index) => (
+              <div key={index} className="card skill-card hover-card">
+                {framework.icon}
+                <h5>{framework.title}</h5>
+                <p>{framework.description}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Software */}
+          {/* Logiciels */}
           <h4>Logiciels</h4>
           <div className="skills-container">
-            <div className="card skill-card">
-              <FaFileWord size={50} className="text-primary" />
-              <h5>Microsoft Word</h5>
-              <p>Création de documents professionnels et rapports.</p>
-            </div>
-            <div className="card skill-card">
-              <FaFileExcel size={50} className="text-success" />
-              <h5>Microsoft Excel</h5>
-              <p>Analyse de données et création de tableaux complexes.</p>
-            </div>
-            <div className="card skill-card">
-              <FaFilePowerpoint size={50} className="text-danger" />
-              <h5>Microsoft PowerPoint</h5>
-              <p>Création de présentations visuellement attrayantes.</p>
-            </div>
-            <div className="card skill-card">
-              <FaDatabase size={50} className="text-info" />
-              <h5>Microsoft Access</h5>
-              <p>Création et gestion de bases de données relationnelles.</p>
-            </div>
+            {[
+              {
+                icon: <FaFileWord size={50} className="text-primary" />,
+                title: "Microsoft Word",
+                description: "Création de documents professionnels.",
+              },
+              {
+                icon: <FaFileExcel size={50} className="text-success" />,
+                title: "Microsoft Excel",
+                description: "Analyse de données complexes.",
+              },
+              {
+                icon: <FaFilePowerpoint size={50} className="text-danger" />,
+                title: "Microsoft PowerPoint",
+                description: "Création de présentations visuelles.",
+              },
+              {
+                icon: <FaDatabase size={50} className="text-info" />,
+                title: "Microsoft Access",
+                description: "Création et gestion de bases de données.",
+              },
+            ].map((software, index) => (
+              <div key={index} className="card skill-card hover-card">
+                {software.icon}
+                <h5>{software.title}</h5>
+                <p>{software.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -179,18 +195,18 @@ const About = () => {
       <div className="row mb-5">
         <div className="col-md-12 text-center">
           <h3>Contact</h3>
-          <div className="card contact-card p-4 shadow-sm">
+          <div className="card contact-card p-4 shadow-lg">
             <h5>Coordonnées</h5>
             <p>
               <FaEnvelope /> Email:{" "}
-              <a href="mailto:exemple@email.com" className="contact-link">
+              <a href="mailto:lucamamitiana@gmail.com" className="contact-link">
                 lucamamitiana@gmail.com
               </a>
             </p>
             <p>
               <FaGithub /> GitHub:{" "}
               <a
-                href="https://github.com/tonprofil"
+                href="https://github.com/LucaM0001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
@@ -201,7 +217,7 @@ const About = () => {
             <p>
               <FaLinkedin /> LinkedIn:{" "}
               <a
-                href="https://www.linkedin.com/in/tonprofil"
+                href="https://www.linkedin.com/in/luca-mamitiana-randrianiaina-5497b7286"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
