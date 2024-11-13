@@ -43,7 +43,7 @@ const Contact = () => {
   }
 
   return (
-    <section className="container pt-5 pb-2">
+    <section className="container py-5">
       <h2>Contactez-moi</h2>
       <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
         <div className="mb-3">

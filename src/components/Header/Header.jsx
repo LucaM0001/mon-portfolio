@@ -14,9 +14,15 @@ const Header = () => {
             alt="logo"
             className="logo-img"
           />
-          <Link className="navbar-brand" to="/">
-            <h2 className="text-light">RANDRIANIAINA Luca Mamitiana</h2>
+
+          {/* Nom visible uniquement sur grand écran */}
+          <Link
+            className="navbar-brand d-none d-lg-flex align-items-center"
+            to="/"
+          >
+            <h2 className="text-light mb-0">RANDRIANIAINA Luca Mamitiana</h2>
           </Link>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -28,9 +34,17 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           {/* Liens de navigation */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+              {/* Nom visible uniquement sur mobile */}
+              <li className="nav-item d-lg-none">
+                <Link className="nav-link text-light fw-bold" to="/">
+                  RANDRIANIAINA Luca Mamitiana
+                </Link>
+              </li>
+
               <li className="nav-item">
                 <Link className="nav-link hover-underline-animation" to="/">
                   À propos
@@ -61,6 +75,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
+
             {/* Icônes des réseaux sociaux avec animations */}
             <div className="d-flex ms-3">
               <a

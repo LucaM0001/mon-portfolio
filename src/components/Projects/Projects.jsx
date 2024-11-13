@@ -60,13 +60,13 @@ const Projects = () => {
         "Country API est une application web permettant d'afficher des informations détaillées sur les pays du monde entier en utilisant une API REST. L'application utilise ReactJS pour la création de l'interface utilisateur dynamique, Bootstrap pour la mise en page responsive, et Axios pour effectuer des requêtes HTTP vers l'API. L'objectif est de fournir une interface simple et efficace pour explorer des données géographiques, politiques et économiques des pays",
       github: "https://github.com/LucaM0001/API_REST_Country",
       demo: "https://api-rest-country-zeta.vercel.app/",
-      image: "/public/coutry-wise.png",
+      image: "/coutry-wise.png",
       disabled: false,
     },
   ])
 
   return (
-    <section id="projects" className="container py-5">
+    <section id="projects" className="container pt-5">
       <h2 className="text-center mb-5">Mes Récents Projets</h2>
       <div className="row">
         {projects.map((project) => (

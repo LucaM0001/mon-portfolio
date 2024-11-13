@@ -71,7 +71,7 @@ const CuriculumVitae = () => {
   })
 
   return (
-    <div style={{ marginTop: "9rem" }}>
+    <div style={{ marginTop: "6rem" }}>
       {/* Boutons d'exportation */}
       <div className="text-center mt-4">
         <ButtonGroup aria-label="Export options">
