@@ -92,12 +92,12 @@ const Header = () => {
 
       {/* Bouton flottant d'appel à l'action "Contact" */}
       <div className="position-fixed bottom-0 end-0 p-4">
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="btn btn-primary btn-lg rounded-circle shadow-lg contact-btn"
         >
           <span className="text-white">Contact</span>
-        </a>
+        </Link>
       </div>
     </header>
   )
