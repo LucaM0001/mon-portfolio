@@ -38,6 +38,14 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <Link
+                  className="nav-link hover-underline-animation text-primary fw-bold"
+                  to="/curiculumvitae"
+                >
+                  Mon CV
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
                   className="nav-link hover-underline-animation"
                   to="/projects"
                 >

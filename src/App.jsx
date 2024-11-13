@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer/Footer"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/ReactToastify.min.css"
+import CuriculumVitae from "./components/CuriculumVitae/CuriculumVitae"
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<About />} />
+          <Route path="/curiculumvitae" element={<CuriculumVitae />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

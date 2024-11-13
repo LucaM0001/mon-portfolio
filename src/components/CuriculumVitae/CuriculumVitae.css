@@ -1,0 +1,347 @@
+/* Général */
+.cv-container {
+  font-family: "Arial", sans-serif;
+}
+
+.profile-card,
+.section-card {
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  padding: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Compétences Techniques : couleurs adaptées aux logos de chaque technologie */
+.skill-icon {
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+/* HTML : couleur associée à HTML5 */
+.skill-icon.html {
+  color: #e34c26; /* Orange spécifique au logo HTML5 */
+}
+
+/* CSS : couleur associée à CSS3 */
+.skill-icon.css {
+  color: #1572b6; /* Bleu spécifique au logo CSS3 */
+}
+
+/* JavaScript : couleur associée au logo JS */
+.skill-icon.js {
+  color: #f7df1e; /* Jaune spécifique au logo JavaScript */
+}
+
+/* PHP : couleur associée au logo PHP */
+.skill-icon.php {
+  color: #8993be; /* Gris-bleu spécifique au logo PHP */
+}
+
+/* React : couleur associée au logo React */
+.skill-icon.react {
+  color: #61dafb; /* Bleu clair spécifique au logo React */
+}
+
+/* C# : couleur associée au logo C# */
+.skill-icon.csharp {
+  color: #1786a3; /* Bleu spécifique au logo C# */
+}
+
+/* CodeIgniter : couleur associée au logo CodeIgniter */
+.skill-icon.codeigniter {
+  color: #f48024; /* Orange spécifique au logo CodeIgniter */
+}
+
+/* Firebase : couleur associée au logo Firebase */
+.skill-icon.firebase {
+  color: #ffcb2b; /* Jaune spécifique au logo Firebase */
+}
+
+/* MySQL : couleur associée au logo MySQL */
+.skill-icon.mysql {
+  color: #00618a; /* Bleu spécifique au logo MySQL */
+}
+
+/* MongoDB : couleur associée au logo MongoDB */
+.skill-icon.mongodb {
+  color: #47a248; /* Vert spécifique au logo MongoDB */
+}
+
+/* Icônes des systèmes d'exploitation */
+.skill-icon.os {
+  color: #5a5a5a; /* Gris de base pour les systèmes d'exploitation */
+}
+
+/* Spécifique à Linux (inspiré de Tux, le pingouin) */
+/* Ajouter un effet de "pied jaune" à l'icône Linux */
+.skill-icon.os.Linux {
+  color: #000000; /* Noir pour le corps */
+  position: relative;
+}
+
+.skill-icon.os.Linux:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffd700; /* Jaune pour les pieds */
+  border-radius: 50%;
+}
+
+.skill-icon.os.Linux:before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffd700; /* Jaune pour les pieds */
+  border-radius: 50%;
+}
+
+/* Spécifique à Windows */
+.skill-icon.os.Windows {
+  color: #00a4ef; /* Bleu pour Windows */
+}
+
+/* Liens */
+.icon-link {
+  color: #0e76a8;
+}
+
+.icon-link:hover {
+  color: #004b73;
+}
+
+.icon-github {
+  color: #333;
+}
+
+.icon-github:hover {
+  color: #6e5494;
+}
+
+.icon-portfolio {
+  color: #42b883;
+}
+
+.icon-portfolio:hover {
+  color: #2c6e3e;
+}
+
+/* Projets et formations */
+.project {
+  color: #0a74da;
+}
+
+.project:hover {
+  color: #06447b;
+}
+
+/* Icônes des projets */
+.skill-icon.project {
+  color: #0a74da; /* Bleu pour les icônes des projets */
+}
+
+.skill-icon.project:hover {
+  color: #06447b; /* Bleu plus foncé lors du survol */
+}
+
+/* Icônes de la formation */
+.skill-icon.education {
+  color: #f8b400; /* Jaune pour les icônes de formation */
+}
+
+.skill-icon.education:hover {
+  color: #c88e00; /* Jaune plus foncé lors du survol */
+}
+
+/* Langues */
+/* Icônes des langues */
+.skill-icon.language {
+  color: #6c757d; /* Gris doux pour les icônes de langue */
+}
+
+.skill-icon.language:hover {
+  color: #007bff; /* Bleu vif au survol pour l'interactivité */
+}
+
+.hobby {
+  color: #f8b400;
+}
+
+.hobby:hover {
+  color: #c88e00;
+}
+
+.skill-icon.method {
+  color: #4e73df;
+}
+
+.skill-icon.os {
+  color: #5a5a5a;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+/* Hobbies */
+.hobby {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Table */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+ul li span {
+  font-weight: bold;
+}
+
+/* Couleurs personnalisées pour les icônes de contact et informations personnelles */
+
+/* Email */
+.icon.email {
+  color: #007bff; /* Bleu pour l'email */
+}
+
+.icon.email:hover {
+  color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Téléphone */
+.icon.phone {
+  color: #28a745; /* Vert pour le téléphone */
+}
+
+.icon.phone:hover {
+  color: #218838; /* Vert plus foncé au survol */
+}
+
+/* Date de naissance */
+.icon.birthday {
+  color: #f8b400; /* Jaune pour la date de naissance */
+}
+
+.icon.birthday:hover {
+  color: #c88e00; /* Jaune plus foncé au survol */
+}
+
+/* Lieu de naissance */
+.icon.location {
+  color: #17a2b8; /* Bleu clair pour le lieu de naissance */
+}
+
+.icon.location:hover {
+  color: #138496; /* Bleu plus foncé au survol */
+}
+
+/* Logement */
+.icon.home {
+  color: #6c757d; /* Gris pour le logement */
+}
+
+.icon.home:hover {
+  color: #5a6268; /* Gris plus foncé au survol */
+}
+
+/* Nationalité */
+.icon.nationality {
+  color: #e34c26; /* Orange pour la nationalité */
+}
+
+.icon.nationality:hover {
+  color: #d25e20; /* Orange plus foncé au survol */
+}
+
+/* Contact Information */
+.contact-group {
+  margin-bottom: 15px;
+}
+
+.contact-group h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-group div {
+  margin-bottom: 8px;
+}
+
+.contact-group .icon {
+  margin-right: 8px;
+}
+
+.contact-group a {
+  color: #0e76a8;
+}
+
+.contact-group a:hover {
+  color: #004b73;
+}
+
+/* Personal Information */
+.personal-group {
+  margin-top: 15px;
+}
+
+.personal-group h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.personal-group div {
+  margin-bottom: 8px;
+}
+
+.personal-group .icon {
+  margin-right: 8px;
+}
+
+/* Style for the text in the contact and personal sections */
+.contact-group span,
+.personal-group strong {
+  font-weight: normal;
+}
