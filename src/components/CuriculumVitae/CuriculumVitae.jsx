@@ -224,7 +224,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/MG-Store
                   </a>
                 </div>
@@ -239,7 +240,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/Marvel-Quiz
                   </a>
                 </div>
@@ -254,7 +256,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/BookVault
                   </a>
                 </div>
@@ -269,7 +272,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/Chat-App
                   </a>
                 </div>
@@ -284,7 +288,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/OrganizeMe
                   </a>
                 </div>
@@ -299,7 +304,8 @@ const CuriculumVitae = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="icon-link" />{" "}
+                    <FaGithub style={{ marginRight: '8px', fontSize: '1.2rem', color: '#181717' }} />
+{" "}
                     https://github.com/LucaM0001/CountryWise
                   </a>
                 </div>
