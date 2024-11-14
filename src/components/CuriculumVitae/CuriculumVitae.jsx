@@ -220,12 +220,12 @@ const CuriculumVitae = () => {
                 en ligne (React, Bootstrap, Firebase)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/MG-Store"
+                    href="https://github.com/LucaM0001/MG-Store"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/MG-Store
+                    https://github.com/LucaM0001/MG-Store
                   </a>
                 </div>
               </li>
@@ -235,12 +235,12 @@ const CuriculumVitae = () => {
                 quiz sur l'univers Marvel (React, Bootstrap, Redux, Firebase)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/Marvel-Quiz"
+                    href="https://github.com/LucaM0001/Marvel-Quiz"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/Marvel-Quiz
+                    https://github.com/LucaM0001/Marvel-Quiz
                   </a>
                 </div>
               </li>
@@ -250,12 +250,12 @@ const CuriculumVitae = () => {
                 (CodeIgniter, MySQL, Bootstrap)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/BookVault"
+                    href="https://github.com/LucaM0001/BookVault"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/BookVault
+                    https://github.com/LucaM0001/BookVault
                   </a>
                 </div>
               </li>
@@ -265,12 +265,12 @@ const CuriculumVitae = () => {
                 réel (React, Bootstrap, Node.js, Socket.IO, MongoDB)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/Chat-App"
+                    href="https://github.com/LucaM0001/Chat-App"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/Chat-App
+                    https://github.com/LucaM0001/Chat-App
                   </a>
                 </div>
               </li>
@@ -280,12 +280,12 @@ const CuriculumVitae = () => {
                 Bootstrap, LocalStorage)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/OrganizeMe"
+                    href="https://github.com/LucaM0001/OrganizeMe"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/OrganizeMe
+                    https://github.com/LucaM0001/OrganizeMe
                   </a>
                 </div>
               </li>
@@ -295,12 +295,12 @@ const CuriculumVitae = () => {
                 géographiques (ReactJS, Bootstrap)
                 <div>
                   <a
-                    href="https://github.com/tonUtilisateur/CountryWise"
+                    href="https://github.com/LucaM0001/CountryWise"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub className="icon-link" />{" "}
-                    https://github.com/tonUtilisateur/CountryWise
+                    https://github.com/LucaM0001/CountryWise
                   </a>
                 </div>
               </li>
@@ -308,7 +308,7 @@ const CuriculumVitae = () => {
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>CodeCraft (2019)</strong> : Application de codage en
                 ligne (HTML, CSS, JS, Firebase)
-                {/* Pas de lien GitHub, donc on ne met rien ici */}
+                {/* Pas de lien GitHub pour ce projet */}
               </li>
             </ul>
           </Card.Body>
