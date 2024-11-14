@@ -170,7 +170,7 @@ const CuriculumVitae = () => {
                 <p>
                   <strong>Langages :</strong>{" "}
                   <SiCsharp className="skill-icon csharp" /> C#,{" "}
-                  <FaJava className="skill-icon js" /> Java, Pascal
+                  <FaJava className="skill-icon js" /> Java, C
                 </p>
                 <p>
                   <strong>Développement Web :</strong>{" "}
