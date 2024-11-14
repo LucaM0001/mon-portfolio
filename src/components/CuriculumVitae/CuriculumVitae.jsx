@@ -101,7 +101,7 @@ const CuriculumVitae = () => {
                   alt="Profile"
                   className="rounded-circle profile-img mb-3"
                 />
-                <h3 className="name">Luca Mamitiaina RANDRIANIAINA</h3>
+                <h3 className="name">Luca Mamitiaina Randriania</h3>
                 <p className="job-title">Développeur Web</p>
               </Col>
               <Col md={8} className="contact-info">
@@ -170,7 +170,7 @@ const CuriculumVitae = () => {
                 <p>
                   <strong>Langages :</strong>{" "}
                   <SiCsharp className="skill-icon csharp" /> C#,{" "}
-                  <FaJava className="skill-icon js" /> Java, C
+                  <FaJava className="skill-icon js" /> Java, Pascal
                 </p>
                 <p>
                   <strong>Développement Web :</strong>{" "}
@@ -218,36 +218,97 @@ const CuriculumVitae = () => {
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>MG-Store (2024)</strong> : Application Web de commerce
                 en ligne (React, Bootstrap, Firebase)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/MG-Store"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/MG-Store
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>Marvel-Quiz (2023)</strong> : Application interactive de
                 quiz sur l'univers Marvel (React, Bootstrap, Redux, Firebase)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/Marvel-Quiz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/Marvel-Quiz
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>BookVault (2022)</strong> : Gestion de bibliothèque
                 (CodeIgniter, MySQL, Bootstrap)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/BookVault"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/BookVault
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>Chat-App (2021)</strong> : Application de chat en temps
                 réel (React, Bootstrap, Node.js, Socket.IO, MongoDB)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/Chat-App"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/Chat-App
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>OrganizeMe (2020)</strong> : Gestion de tâches (ReactJS,
                 Bootstrap, LocalStorage)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/OrganizeMe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/OrganizeMe
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>CountryWise (2020)</strong> : API REST d'informations
                 géographiques (ReactJS, Bootstrap)
+                <div>
+                  <a
+                    href="https://github.com/tonUtilisateur/CountryWise"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon-link" />{" "}
+                    https://github.com/tonUtilisateur/CountryWise
+                  </a>
+                </div>
               </li>
               <li>
                 <FaProjectDiagram className="skill-icon project" />{" "}
                 <strong>CodeCraft (2019)</strong> : Application de codage en
                 ligne (HTML, CSS, JS, Firebase)
+                {/* Pas de lien GitHub, donc on ne met rien ici */}
               </li>
             </ul>
           </Card.Body>
