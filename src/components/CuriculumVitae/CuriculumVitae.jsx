@@ -101,7 +101,7 @@ const CuriculumVitae = () => {
                   alt="Profile"
                   className="rounded-circle profile-img mb-3"
                 />
-                <h3 className="name">Luca Mamitiaina Randriania</h3>
+                <h3 className="name">Luca Mamitiaina RANDRIANIAINA</h3>
                 <p className="job-title">Développeur Web</p>
               </Col>
               <Col md={8} className="contact-info">
